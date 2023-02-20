@@ -3,10 +3,7 @@ import java.util.Random;
 public class homework1 {
     int i;
     int n;
-    int max;
-    
-    static int[] m2 ;
-    int min;
+        
     Random random = new Random();
 
     public static void main(String[] args) {
@@ -20,6 +17,27 @@ public class homework1 {
     //System.out.println(n);
 
     /* 3. Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1 */
+
+    int i = new Random().nextInt(20);
+    int n = Integer.toBinaryString(i).length();
+    int cnt = 0;
+    int j = Short.MAX_VALUE;
+        for ( ; i <=j ; i++){
+            if (i % n == 0 ){
+                cnt++;
+            }
+        }
+    int[] m2 = new int[cnt];
+    cnt = 0;
+        for ( ;  i <= j; i++) {
+            if ( i % n == 0 ) {
+                m2[cnt++] = i;
+        }
+    System.out.println(m2);
+    }
+
+
+
     //int max = new Random().nextInt(i, 200);
     //for( int j = 0; j < m1.length; j++){
     //    if ( i < max) {
@@ -32,22 +50,22 @@ public class homework1 {
     //}
 
     /* 4.Найти все некратные n числа в диапазоне от Short.MIN_VALUE до i и сохранить в массив m2  */
-    int i = new Random().nextInt(200);
-    int n = Integer.toBinaryString(i).length();
-    int cnt = 0;
-        for (int j = Short.MIN_VALUE; j <= i; j++){
-            if (j % n == 0 ){
-                cnt++;
-            }
-        }
-    int[] m1 = new int[cnt];
-    cnt = 0;
-    for (int j = Short.MIN_VALUE; j <= i; j++) {
-        if ( j % n == 0 ) {
-            m1[cnt++] = j;
-        }
-    System.out.println(m1);
-    }
+   // int i = new Random().nextInt(200);
+   //int n = Integer.toBinaryString(i).length();
+   // int cnt = 0;
+   //     for (int j = Short.MIN_VALUE; j <= i; j++){
+   //         if (j % n == 0 ){
+   //             cnt++;
+   //         }
+   //     }
+   // int[] m1 = new int[cnt];
+   // cnt = 0;
+   // for (int j = Short.MIN_VALUE; j <= i; j++) {
+   //     if ( j % n == 0 ) {
+   //         m1[cnt++] = j;
+   //     }
+   // System.out.println(m1);
+   // }
 }
 }
 
