@@ -18,26 +18,28 @@ public class homework1 {
 
     /* 3. Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1 */
 
-    int i = new Random().nextInt(20);
-    int n = Integer.toBinaryString(i).length();
+    //int i = new Random().nextInt(20);
+    //int n = Integer.toBinaryString(i).length();
     int cnt = 0;
     int j = Short.MAX_VALUE;
-        for ( ; i <=j ; i++){
+        for (int i = new Random().nextInt(20) ; i <=j ; i++){
+            int n = Integer.toBinaryString(i).length();
             if (i % n == 0 ){
                 cnt++;
             }
         }
     int[] m2 = new int[cnt];
     cnt = 0;
-        for ( ;  i <= j; i++) {
+        for ( int i = new Random().nextInt(20) ;  i <= j; i++) {
+            int n = Integer.toBinaryString(i).length(); 
             if ( i % n == 0 ) {
                 m2[cnt++] = i;
         }
-    System.out.println(m2);
     }
-
-
-
+        for ( int x = 0 ; x <= cnt ; x++) {             // вывод массива на экран
+            System.out.println(m2[x]);
+        }
+        
     //int max = new Random().nextInt(i, 200);
     //for( int j = 0; j < m1.length; j++){
     //    if ( i < max) {
@@ -64,7 +66,9 @@ public class homework1 {
    //     if ( j % n == 0 ) {
    //         m1[cnt++] = j;
    //     }
-   // System.out.println(m1);
+   // for ( int x = 0 ; x <= cnt ; x++) {             // вывод массива на экран
+   // System.out.println(m1[x]);
+   //}
    // }
 }
 }
