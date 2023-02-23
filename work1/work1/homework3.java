@@ -3,6 +3,7 @@ package work1;
 import java.util.ArrayList;
 import java.util.Collections;
 //import java.util.ListIterator;
+import java.util.LinkedList;
 
 public class homework3 {
 
@@ -25,6 +26,10 @@ public class homework3 {
              System.out.println(str);
          }
       // 2.  Итерация всех элементов списка цветов и добавления к каждому символа '!'.
+             for (int i = 0; i < list.size(); i++){
+                list.add("!");
+             }      
+             System.out.println(list);
       // 3.  Вставить элемент в список в первой позиции.
                 list.add(0, "Elem");
                 System.out.println(list );
@@ -77,5 +82,16 @@ public class homework3 {
             long end = System.currentTimeMillis();
             System.out.println(end - begin);
            
+            LinkedList<String> list4 = new LinkedList<>(list);
+            long begin1 = System.currentTimeMillis();
+
+            for (int i = 0 ; i < 1000 ; i++){
+                list4.add(0, "Elem");
+            }
+            long end1 = System.currentTimeMillis();
+            System.out.println("*".repeat(15));
+            System.out.println(end1 - begin1);
+
+
     }
 }
